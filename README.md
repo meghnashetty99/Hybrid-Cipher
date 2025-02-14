@@ -49,13 +49,13 @@ Transposition Key: [3, 0, 4, 1, 2]
 Encrypted (Hex): 7a6f9d8e3f4a5c7e6b2c...
 Decrypted: This is a secure hybrid cipher.
 ```
-## Why is this Hybrid Cipher More Secure?
-🔹 Increased Key Space:
-- The 128-bit Vigenère extension ensures a large key space, preventing brute-force attacks.
-- The columnar transposition step introduces additional permutation complexity.  
-🔹 Confusion & Diffusion Principles (Shannon’s Security Model):
-- Vigenère (Substitution) adds confusion: Each character is substituted unpredictably.
-- Transposition adds diffusion: The entire structure of the message changes, making pattern analysis difficult.  
-🔹 Resilience Against Known Attacks:
-- Prevents Frequency Analysis: Since the transposition step scrambles letter positions, letter frequency distributions are obscured.
-- Prevents Key Length Detection: Traditional Kasiski examination fails because transposition disrupts repeated patterns.
+## 🛡️ Security Advantages
+- ✅ Prevents Brute Force Attacks – Large key space (2¹²⁸ for Vigenère + column permutations).
+- ✅ Defeats Frequency Analysis – Transposition shuffles character positions.
+- ✅ Breaks Pattern Recognition – Kasiski examination fails due to diffusion.
+- ✅ Resistant to Known-Plaintext Attacks – Double encryption adds complexity.
+
+## 💡 Future Improvements
+🔹 Extend support for numbers & symbols (Base64 encoding).  
+🔹 Add multiple rounds of transposition for extra security.  
+🔹 Implement GPU-based parallel encryption for speed optimization.  
